@@ -1,0 +1,108 @@
+import 'package:flutter/material.dart';
+
+class MyDrawer extends StatelessWidget {
+const MyDrawer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: Container(
+        color: const Color.fromARGB(255, 248, 202, 133),
+        child: ListView(
+          children: const [
+            DrawerHeader(
+              child: UserAccountsDrawerHeader(
+                accountName: Text("Aditya"), 
+                accountEmail: Text("adi02@gmail.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5pK5Uj3AfZoB3RWTqNssmA0Pgdr-Vn5HAag&usqp=CAU"),
+                ),
+                ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home,
+              color: Colors.white,),
+              title: Text(
+                "Home",
+              textScaleFactor: 1.2,
+              style: TextStyle(color: Color.fromARGB(255, 15, 143, 126)),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite,
+              color: Colors.white,),
+              title: Text(
+                "Favorites",
+              textScaleFactor: 1.2,
+              style: TextStyle(color: Color.fromARGB(255, 15, 143, 126)),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            ListTile(
+              leading: Icon(Icons.search,
+              color: Colors.white,),
+              title: Text(
+                "Search",
+              textScaleFactor: 1.2,
+              style: TextStyle(color: Color.fromARGB(255, 15, 143, 126)),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            ListTile(
+              leading: Icon(Icons.trolley,
+              color: Colors.white,),
+              title: Text(
+                "Orders",
+              textScaleFactor: 1.2,
+              style: TextStyle(color: Color.fromARGB(255, 15, 143, 126)),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            ListTile(
+              leading: Icon(Icons.settings,
+              color: Colors.white,),
+              title: Text(
+                "Settings",
+              textScaleFactor: 1.2,
+              style: TextStyle(color: Color.fromARGB(255, 15, 143, 126)),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            ListTile(
+              leading: Icon(Icons.money,
+              color: Colors.white,),
+              title: Text(
+                "Payments",
+              textScaleFactor: 1.2,
+              style: TextStyle(color: Color.fromARGB(255, 15, 143, 126)),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.help_center,
+              color: Colors.white,),
+              title: Text(
+                "Support",
+              textScaleFactor: 1.2,
+              style: TextStyle(color: Color.fromARGB(255, 15, 143, 126)),
+              ),
+              ),
+            SizedBox(
+              height: 15,
+            )
+          ]
+        )
+      ),
+    );
+  }
+}
